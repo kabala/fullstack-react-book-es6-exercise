@@ -1,0 +1,101 @@
+@import '../node_modules/foundation-sites/scss/foundation';
+@import 'resources/material-design-iconic-font/scss/material-design-iconic-font';
+
+@include foundation-everything;
+
+$primary: #0093B1;
+
+.card {
+  padding: 10px;
+
+  transition: all .3s ease-in-out;
+
+  .cardInner {
+    padding: 15px 15px 30px 15px;
+    border-bottom: 1px dotted #D6CCE5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .thumbnail {
+    width: 30%;
+    margin-bottom: 0;
+  }
+
+  .content {
+    width: 70%;
+    padding: 0 10px 0 30px;
+  }
+
+  .description {
+    p {
+      color: #676767;
+      font-size: .8em;
+    }
+  }
+
+  .extra {
+    color: #A4A4A4;
+    font-size: .7em;
+  }
+
+  a {
+    color: $primary;
+    font-size: 1em;
+    margin-bottom: 15px;
+    display: inline-block;
+  }
+
+  .avatar {
+    margin-left: 10px;
+  }
+
+  .votes {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+
+    i {
+      cursor: pointer;
+      color: $primary;
+      
+      &:first-child {
+        padding-right: 6px;
+      }
+
+      &:last-child {
+        padding-left: 6px;
+      }
+    }
+  }
+}
+
+.avatar {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+.mv-20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.change-anim {
+  animation: fade-red .1s ease-out;
+}
+
+@keyframes fade-red {
+  from {
+    background-image: linear-gradient(rgba(#DBCBA7, 0) 50%, rgba(#DBCBA7, .4) 100%);
+  }
+  
+  to {
+    background-image: linear-gradient(rgba(#DBCBA7, 0) 50%, rgba(#DBCBA7, 0) 100%);
+  }
+
+}
