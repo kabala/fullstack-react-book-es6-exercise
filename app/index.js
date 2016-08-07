@@ -1,6 +1,7 @@
 import 'style.scss'
 
 import React, { Component } from 'react'
+import { Router, Route,  browserHistory } from 'react-router'
 import { render } from 'react-dom'
 import Product from './components/product'
 
@@ -100,6 +101,12 @@ class ProductList extends Component {
 }
 
 render(
-  <ProductList />,
+  (
+  <Router >
+    <Route path="/">
+      <Route path="list" component={ProductList}/>
+    </Route>
+  </Router>
+  ),
   document.getElementById( 'app' )
 )
